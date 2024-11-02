@@ -17,7 +17,7 @@ def load_model():
         nn.Linear(256, 4)
     )
     resnet18_model.conv1 = nn.Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
-    resnet18_model.load_state_dict(torch.load("chest-ctscan_model (1).pth"))
+    resnet18_model.load_state_dict(torch.load("chest-ctscan_model.pth"))
     resnet18_model.eval()
     return resnet18_model
 
